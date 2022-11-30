@@ -53,14 +53,14 @@
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link custom-tap" id="active-tab" data-bs-toggle="tab"
-                            data-bs-target="#active-tab-pane" type="button" role="tab" aria-controls="active-tab-pane"
+                            data-bs-target="#tab-alums" type="button" role="tab" aria-controls="active-tab-pane"
                             aria-selected="true">
                             Positivo Alumno
                         </button>
                     </li>
                     <li class="nav-item" role="presentation">
                         <button class="nav-link custom-tap" id="pending-tab" data-bs-toggle="tab"
-                            data-bs-target="#pending-tab-pane" type="button" role="tab" aria-controls="pending-tab-pane"
+                            data-bs-target="#tab-seguimiento" type="button" role="tab" aria-controls="pending-tab-pane"
                             aria-selected="true">
                             Seguimiento AL
                         </button>
@@ -74,12 +74,28 @@
         <div class="tab-content" id="myTabContent">
             <!-- Todas -->
             <div class="tab-pane fade show active px-3 pt-3 pb-10 table-responsive" id="all-tab-pane">
-                <table class="table table-hover align-middle" id="table-all">
-                    <thead>
+                <table class="table table-hover align-middle" id="table-grupos">
+                    <thead id="columnas">
                         <tr>
                             <th scope="col">
                                 <i class='bx bxs-sun'></i>
+                                <span class="mx-1">Grado</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bxs-sun'></i>
+                                <span class="mx-1">Grupo</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bxs-sun'></i>
                                 <span class="mx-1">Turno</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bxs-sun'></i>
+                                <span class="mx-1">Periodo</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bxs-sun'></i>
+                                <span class="mx-1">Programa</span>
                             </th>
                             <th scope="col">
                                 <i class='bx bxs-graduation'></i>
@@ -95,12 +111,136 @@
                             </th>
                         </tr>
                     </thead>
+
+                    <tbody id="registros">
+
+                    </tbody>
+
                 </table>
             </div>
 
             <!-- siguinete -->
-            <div class="tab-pane fade px-3 pt-3 pb-10 table-responsive"
-            id="active-tab-pane" role="tabpanel" aria-labelledby="active-tab" tabindex="0">
+
+            <div class="tab-pane fade  px-3 pt-3 pb-10 table-responsive " id="tab-alums">
+                <table class="table table-hover align-middle" id="table-alumnospos">
+                    <thead id="columnas">
+                        <tr>
+                            <th scope="col">
+                                <i class='bx bxs-sun'></i>
+                                <span class="mx-1"># Contagio</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bxs-sun'></i>
+                                <span class="mx-1">Fecha Contagio</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bxs-sun'></i>
+                                <span class="mx-1">Matricula</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bxs-sun'></i>
+                                <span class="mx-1">Nombre</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bxs-sun'></i>
+                                <span class="mx-1">Apellido Paterno</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bxs-graduation'></i>
+                                <span class="mx-1">Apellido Materno</span> 
+                            </th>
+                            <th scope="col">
+                                <i class='bx bx-file'></i>
+                                <span class="mx-1">Genero</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bxs-graduation'></i>
+                                <span class="mx-1">Riesgo</span> 
+                            </th>
+                            <th scope="col">
+                                <i class='bx bx-file'></i>
+                                <span class="mx-1">Antecedentes</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bx-file'></i>
+                                <span class="mx-1">Extra</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bx-wrench'></i>
+                                <span class="mx-1">Opcion</span>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="registros">
+
+                    </tbody>
+
+                </table>
+            </div>
+
+
+             <!-- siguinete -->
+
+             <div class="tab-pane fade px-3 pt-3 pb-10 table-responsive " id="tab-seguimiento">
+                <table class="table table-hover align-middle" id="table-seguimiento">
+                    <thead id="columnas">
+                        <tr>
+                            <th scope="col">
+                                <i class='bx bxs-sun'></i>
+                                <span class="mx-1"># Contagio</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bxs-sun'></i>
+                                <span class="mx-1">Fecha</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bxs-sun'></i>
+                                <span class="mx-1">Comunicación</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bxs-sun'></i>
+                                <span class="mx-1">Reporte</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bxs-sun'></i>
+                                <span class="mx-1">Entrevista</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bxs-graduation'></i>
+                                <span class="mx-1">Fecha contagio</span> 
+                            </th>
+                            <th scope="col">
+                                <i class='bx bx-file'></i>
+                                <span class="mx-1">Medico</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bxs-graduation'></i>
+                                <span class="mx-1">Horario</span> 
+                            </th>
+                            <th scope="col">
+                                <i class='bx bx-file'></i>
+                                <span class="mx-1">Especialidad</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bx-file'></i>
+                                <span class="mx-1">Extra</span>
+                            </th>
+                            <th scope="col">
+                                <i class='bx bx-wrench'></i>
+                                <span class="mx-1">Opcion</span>
+                            </th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="registros">
+
+                    </tbody>
+
+                </table>
+            </div>
+
+
         </div>
     </div>
 </body>
